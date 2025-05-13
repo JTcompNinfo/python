@@ -1,6 +1,6 @@
 # Caesar Cipher
 
-import pyperclip
+#import pyperclip
 
 # The string to be encrypted/decrypted
 meesage = "This is my secret message"
@@ -18,7 +18,7 @@ SYMOBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
 # Store the encrypted/decrypted from of the message
 translated = ''
 
-for symbol in message:
+for symbol in meesage:
     # NOTE: only symobls in the symbols string can be encrypted/decrypted.
     if symbol in SYMOBOLS:
         symbolIndex = SYMOBOLS.find(symbol)
@@ -26,7 +26,7 @@ for symbol in message:
         # Preform encrypted/decrypted
         if mode == 'encrypt':
             translatedIndex = symbolIndex + key
-        elif mode == 'decrypt';
+        elif mode == 'decrypt':
             translatedIndex = symbolIndex - key
 
         # Handel wraparound if needed:
@@ -42,4 +42,4 @@ for symbol in message:
 
 # Output the translated string
 print(translated)
-pyperclip.copy(translated)
+#pyperclip.copy(translated)
